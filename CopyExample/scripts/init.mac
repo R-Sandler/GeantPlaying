@@ -1,0 +1,6 @@
+##### BEGIN init.mac #####
+# Some basic settings
+/control/verbose 2
+/control/saveHistory
+/run/verbose 2
+##### END init.mac #####

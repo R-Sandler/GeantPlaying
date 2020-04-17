@@ -1,0 +1,4 @@
+/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/rebuild_cache.dir
+/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/ne697g4.dir
+/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/edit_cache.dir
+/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/NE697G4.dir

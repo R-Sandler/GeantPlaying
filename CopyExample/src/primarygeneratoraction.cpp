@@ -19,7 +19,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction():
 {
   G4cout << "Creating PrimaryGeneratorAction...\n";
   // Make the source monoenergetic
-  gun->SetParticleEnergy(14.1*keV);
+  gun->SetParticleEnergy(14.1*MeV);
 
   // Set the position - we want a point-like cone beam source. Note that
   // if we wanted an extended source, we would want to randomly sample the
@@ -43,14 +43,16 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* e) {
   // Get a random x, y, z. Sample uniformly on cosine. This gives a
   // uniform sampling of points from the sphere's surface. Sampling
   // on theta and phi, then converting, will produce a biased result!
-  double ctheta = 2.0 * G4UniformRand() - 1.0;
-  double stheta = sqrt(1.0 - pow(ctheta, 2));
-  double phi = 2.0 * CLHEP::pi * G4UniformRand();
-  double x = stheta * sin(phi);
-  double z = stheta * cos(phi);
+  // double ctheta = 2.0 * G4UniformRand() - 1.0;
+  //double stheta = sqrt(1.0 - pow(ctheta, 2));
+  //double phi = 2.0 * CLHEP::pi * G4UniformRand();
+  //double x = stheta * sin(phi);
+  //double z = stheta * cos(phi);
   // Force positive direction - in the direction of the phantom/detector
-  double y = abs(ctheta);
-
+  //double y = abs(ctheta);
+  double x = 0;
+  double y = 10;
+  double z = 0;
   G4ThreeVector dir(x, y, z);
   gun->SetParticleMomentumDirection(dir);
 

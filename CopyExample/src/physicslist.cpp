@@ -121,20 +121,20 @@ void PhysicsList::ConstructProcess() {
 
   if(fOn) {
     // Electric and Magnetic Processes
-  /*  G4cout << "PhysicsList::ConstructProcess() -> Registering EM "
+    G4cout << "PhysicsList::ConstructProcess() -> Registering EM "
       << "processes" << G4endl;
     ConstructEM();
-*/
+
     //Radioactive Decay
     G4cout << "PhysicsList::ConstructProcess() -> Registering "
       << "radioactive decay processes" << G4endl;
     ConstructRadioactiveDecay();
 
     //Construct hadronic physics
-  /*  G4cout << "PhysicsList::ConstructProcess() -> Registering hadronic "
+    G4cout << "PhysicsList::ConstructProcess() -> Registering hadronic "
       << "processes" << G4endl;
     ConstructHadronic();
-*/  }
+  }
 
   G4cout << "PhysicsList::ConstructProcess() -> Done registering "
     << "physics processes" << G4endl;
@@ -142,7 +142,7 @@ void PhysicsList::ConstructProcess() {
 }
 
 /* Construct all of the electromagnetic processes. */
-/*void PhysicsList::ConstructEM() {
+void PhysicsList::ConstructEM() {
   G4VPhysicsConstructor* em_physics_list;
   switch (iEMList) {
     case 0:
@@ -172,7 +172,7 @@ void PhysicsList::ConstructProcess() {
   em_extra_physics_list->ConstructProcess();
   return;
 }
-*/
+
 /* Construct radioactive decay processes. */
 void PhysicsList::ConstructRadioactiveDecay() {
   G4VPhysicsConstructor* dec_physics_list =
@@ -186,7 +186,7 @@ void PhysicsList::ConstructRadioactiveDecay() {
 }
 
 /* The hadronic interactions for neutrons, protons and ions. */
-/*void PhysicsList::ConstructHadronic() {
+void PhysicsList::ConstructHadronic() {
   // all physics below is modeled on either QGSP_BIC(_HP) or
   // QGSP_BERT(_HP) physics lists
   G4bool bic = true;
@@ -229,7 +229,7 @@ void PhysicsList::ConstructRadioactiveDecay() {
   ionPhysics->ConstructProcess();
   return;
 }
-*/
+
 /* Set cuts. */
 void PhysicsList::SetCuts() {
   // the default cut value will only simulate things that extend

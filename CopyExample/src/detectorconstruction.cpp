@@ -122,7 +122,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
   phantom_vis->SetColour(G4Colour::Yellow());
   phantom_log->SetVisAttributes(phantom_vis);
   new G4PVPlacement(0,
-                    G4ThreeVector(0, 0, 0),
+                    G4ThreeVector(0, 35*cm, 0),
                     phantom_log,
                     "phantom_phys",
                     world_log,
@@ -131,7 +131,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct() {
   return world_phys;
 }
 
-/* Completely clear out the detector geometry and rebuild it from 
+/* Completely clear out the detector geometry and rebuild it from
  * scratch. This is required to have a dynamic geometry, particularly
  * when switching shapes or materials. */
 void DetectorConstruction::reloadGeometry() {

@@ -13,7 +13,7 @@ Detector::Detector(const G4String& n):
   // Default position/dimensions are the same as what we had in the
   // DetectorConstruction
   position(0, 50.0*cm + 2.5*cm, 0),
-  dimensions(50.0*cm, 5.0*cm, 50.0*cm),
+  dimensions(50.0*cm, 10.0*cm, 50.0*cm),
   geometry(nullptr),
   logical(nullptr),
   physical(nullptr),
@@ -64,10 +64,23 @@ void Detector::build(G4LogicalVolume* world_log) {
                        dimensions.y() / 2.0,
                        dimensions.z() / 2.0);
 
-  // Logical volume (material)
+  G4double z, a, fractionmass, density;
+  G4String title, symbol;
+  G4int ncomponents;
+
+  a = 1.00794*g/mole;
+  G4Element* elH  = new G4Element(title="Hydrogen",symbol="H" , z= 1., a);
+
+  a = 12.0107*g/mole;
+  G4Element* elC  = new G4Element(title="Carbon",symbol="C" , z= 6., a);
+
+  density = 1.096*mg/cm3;
+  G4Material* EJ = new G4Material(title="EJ-276",density,ncomponents=2);
+  EJ->AddElement(elH, fractionmass=7.17*perCent);
+  EJ->AddElement(elC, fractionmass=92.83*perCent);
   auto lname = name + "_log";
   auto dmat =
-    G4NistManager::Instance()->FindOrBuildMaterial("G4_ANTHRACENE");
+    G4NistManager::Instance()->FindOrBuildMaterial("EJ-276");
   logical = new G4LogicalVolume(geometry,
                                 dmat,
                                 lname);

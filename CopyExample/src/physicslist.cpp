@@ -53,7 +53,7 @@ PhysicsList::PhysicsList(const G4bool& on, const G4bool& nhp,
         << "\nPass 1 for Livermore, 2 for Penelope." << G4endl;
     }
   }
-  
+
   //Verbosity level:
   //  0: Silent
   //  1: Warning message
@@ -78,10 +78,10 @@ PhysicsList::~PhysicsList() {
 void PhysicsList::ConstructParticle() {
   G4cout << "Constructing particles..." << G4endl;
 
-  // Construct all bosons 
+  // Construct all bosons
   G4cout << "...bosons" << G4endl;
   G4BosonConstructor b_con;
-  b_con.ConstructParticle();  
+  b_con.ConstructParticle();
 
   // Construct all leptons
   G4cout << "...leptons" << G4endl;
@@ -96,12 +96,12 @@ void PhysicsList::ConstructParticle() {
   // Construct all baryons
   G4cout << "...baryons" << G4endl;
   G4BaryonConstructor h_con;
-  h_con.ConstructParticle();  
+  h_con.ConstructParticle();
 
   // Construct light ions
   G4cout << "...light ions" << G4endl;
   G4IonConstructor i_con;
-  i_con.ConstructParticle();  
+  i_con.ConstructParticle();
 
   // Construct short lived as they are needed
   // for the electronuclear process
@@ -121,20 +121,20 @@ void PhysicsList::ConstructProcess() {
 
   if(fOn) {
     // Electric and Magnetic Processes
-    G4cout << "PhysicsList::ConstructProcess() -> Registering EM "
+  /*  G4cout << "PhysicsList::ConstructProcess() -> Registering EM "
       << "processes" << G4endl;
     ConstructEM();
-
+*/
     //Radioactive Decay
     G4cout << "PhysicsList::ConstructProcess() -> Registering "
       << "radioactive decay processes" << G4endl;
     ConstructRadioactiveDecay();
 
     //Construct hadronic physics
-    G4cout << "PhysicsList::ConstructProcess() -> Registering hadronic "
+  /*  G4cout << "PhysicsList::ConstructProcess() -> Registering hadronic "
       << "processes" << G4endl;
     ConstructHadronic();
-  }
+*/  }
 
   G4cout << "PhysicsList::ConstructProcess() -> Done registering "
     << "physics processes" << G4endl;
@@ -142,7 +142,7 @@ void PhysicsList::ConstructProcess() {
 }
 
 /* Construct all of the electromagnetic processes. */
-void PhysicsList::ConstructEM() {
+/*void PhysicsList::ConstructEM() {
   G4VPhysicsConstructor* em_physics_list;
   switch (iEMList) {
     case 0:
@@ -161,7 +161,7 @@ void PhysicsList::ConstructEM() {
       cerr << "PhysicsList::ConstructEM(): invalid physics list "
         << "selection detected." << endl;
       em_physics_list = new G4EmStandardPhysics(verbosityLevel);
-      break; 
+      break;
 
   }
   em_physics_list->ConstructProcess();
@@ -172,7 +172,7 @@ void PhysicsList::ConstructEM() {
   em_extra_physics_list->ConstructProcess();
   return;
 }
-
+*/
 /* Construct radioactive decay processes. */
 void PhysicsList::ConstructRadioactiveDecay() {
   G4VPhysicsConstructor* dec_physics_list =
@@ -186,7 +186,7 @@ void PhysicsList::ConstructRadioactiveDecay() {
 }
 
 /* The hadronic interactions for neutrons, protons and ions. */
-void PhysicsList::ConstructHadronic() {
+/*void PhysicsList::ConstructHadronic() {
   // all physics below is modeled on either QGSP_BIC(_HP) or
   // QGSP_BERT(_HP) physics lists
   G4bool bic = true;
@@ -229,7 +229,7 @@ void PhysicsList::ConstructHadronic() {
   ionPhysics->ConstructProcess();
   return;
 }
-
+*/
 /* Set cuts. */
 void PhysicsList::SetCuts() {
   // the default cut value will only simulate things that extend

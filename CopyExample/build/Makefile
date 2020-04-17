@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/l3375/GeantPlaying/CopyExample/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,30 +111,57 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ne697g4
+# Target rules for targets named CopyExample
 
 # Build rule for target.
-ne697g4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ne697g4
-.PHONY : ne697g4
+CopyExample: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CopyExample
+.PHONY : CopyExample
 
 # fast build rule for target.
-ne697g4/fast:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/build
-.PHONY : ne697g4/fast
+CopyExample/fast:
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/build
+.PHONY : CopyExample/fast
 
 #=============================================================================
-# Target rules for targets named NE697G4
+# Target rules for targets named CE
 
 # Build rule for target.
-NE697G4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 NE697G4
-.PHONY : NE697G4
+CE: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CE
+.PHONY : CE
 
 # fast build rule for target.
-NE697G4/fast:
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/build
-.PHONY : NE697G4/fast
+CE/fast:
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/build
+.PHONY : CE/fast
+
+src/CopyExample.o: src/CopyExample.cc.o
+
+.PHONY : src/CopyExample.o
+
+# target to build an object file
+src/CopyExample.cc.o:
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/src/CopyExample.cc.o
+.PHONY : src/CopyExample.cc.o
+
+src/CopyExample.i: src/CopyExample.cc.i
+
+.PHONY : src/CopyExample.i
+
+# target to preprocess a source file
+src/CopyExample.cc.i:
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/src/CopyExample.cc.i
+.PHONY : src/CopyExample.cc.i
+
+src/CopyExample.s: src/CopyExample.cc.s
+
+.PHONY : src/CopyExample.s
+
+# target to generate assembly for a file
+src/CopyExample.cc.s:
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/src/CopyExample.cc.s
+.PHONY : src/CopyExample.cc.s
 
 src/detector.o: src/detector.cpp.o
 
@@ -142,7 +169,7 @@ src/detector.o: src/detector.cpp.o
 
 # target to build an object file
 src/detector.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detector.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detector.cpp.o
 .PHONY : src/detector.cpp.o
 
 src/detector.i: src/detector.cpp.i
@@ -151,7 +178,7 @@ src/detector.i: src/detector.cpp.i
 
 # target to preprocess a source file
 src/detector.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detector.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detector.cpp.i
 .PHONY : src/detector.cpp.i
 
 src/detector.s: src/detector.cpp.s
@@ -160,7 +187,7 @@ src/detector.s: src/detector.cpp.s
 
 # target to generate assembly for a file
 src/detector.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detector.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detector.cpp.s
 .PHONY : src/detector.cpp.s
 
 src/detectorconstruction.o: src/detectorconstruction.cpp.o
@@ -169,7 +196,7 @@ src/detectorconstruction.o: src/detectorconstruction.cpp.o
 
 # target to build an object file
 src/detectorconstruction.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detectorconstruction.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detectorconstruction.cpp.o
 .PHONY : src/detectorconstruction.cpp.o
 
 src/detectorconstruction.i: src/detectorconstruction.cpp.i
@@ -178,7 +205,7 @@ src/detectorconstruction.i: src/detectorconstruction.cpp.i
 
 # target to preprocess a source file
 src/detectorconstruction.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detectorconstruction.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detectorconstruction.cpp.i
 .PHONY : src/detectorconstruction.cpp.i
 
 src/detectorconstruction.s: src/detectorconstruction.cpp.s
@@ -187,7 +214,7 @@ src/detectorconstruction.s: src/detectorconstruction.cpp.s
 
 # target to generate assembly for a file
 src/detectorconstruction.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detectorconstruction.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detectorconstruction.cpp.s
 .PHONY : src/detectorconstruction.cpp.s
 
 src/detectorhit.o: src/detectorhit.cpp.o
@@ -196,7 +223,7 @@ src/detectorhit.o: src/detectorhit.cpp.o
 
 # target to build an object file
 src/detectorhit.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detectorhit.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detectorhit.cpp.o
 .PHONY : src/detectorhit.cpp.o
 
 src/detectorhit.i: src/detectorhit.cpp.i
@@ -205,7 +232,7 @@ src/detectorhit.i: src/detectorhit.cpp.i
 
 # target to preprocess a source file
 src/detectorhit.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detectorhit.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detectorhit.cpp.i
 .PHONY : src/detectorhit.cpp.i
 
 src/detectorhit.s: src/detectorhit.cpp.s
@@ -214,7 +241,7 @@ src/detectorhit.s: src/detectorhit.cpp.s
 
 # target to generate assembly for a file
 src/detectorhit.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/detectorhit.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/detectorhit.cpp.s
 .PHONY : src/detectorhit.cpp.s
 
 src/eventaction.o: src/eventaction.cpp.o
@@ -223,7 +250,7 @@ src/eventaction.o: src/eventaction.cpp.o
 
 # target to build an object file
 src/eventaction.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/eventaction.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/eventaction.cpp.o
 .PHONY : src/eventaction.cpp.o
 
 src/eventaction.i: src/eventaction.cpp.i
@@ -232,7 +259,7 @@ src/eventaction.i: src/eventaction.cpp.i
 
 # target to preprocess a source file
 src/eventaction.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/eventaction.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/eventaction.cpp.i
 .PHONY : src/eventaction.cpp.i
 
 src/eventaction.s: src/eventaction.cpp.s
@@ -241,7 +268,7 @@ src/eventaction.s: src/eventaction.cpp.s
 
 # target to generate assembly for a file
 src/eventaction.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/eventaction.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/eventaction.cpp.s
 .PHONY : src/eventaction.cpp.s
 
 src/geometrymessenger.o: src/geometrymessenger.cpp.o
@@ -250,7 +277,7 @@ src/geometrymessenger.o: src/geometrymessenger.cpp.o
 
 # target to build an object file
 src/geometrymessenger.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/geometrymessenger.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/geometrymessenger.cpp.o
 .PHONY : src/geometrymessenger.cpp.o
 
 src/geometrymessenger.i: src/geometrymessenger.cpp.i
@@ -259,7 +286,7 @@ src/geometrymessenger.i: src/geometrymessenger.cpp.i
 
 # target to preprocess a source file
 src/geometrymessenger.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/geometrymessenger.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/geometrymessenger.cpp.i
 .PHONY : src/geometrymessenger.cpp.i
 
 src/geometrymessenger.s: src/geometrymessenger.cpp.s
@@ -268,35 +295,8 @@ src/geometrymessenger.s: src/geometrymessenger.cpp.s
 
 # target to generate assembly for a file
 src/geometrymessenger.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/geometrymessenger.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/geometrymessenger.cpp.s
 .PHONY : src/geometrymessenger.cpp.s
-
-src/ne697g4.o: src/ne697g4.cc.o
-
-.PHONY : src/ne697g4.o
-
-# target to build an object file
-src/ne697g4.cc.o:
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/src/ne697g4.cc.o
-.PHONY : src/ne697g4.cc.o
-
-src/ne697g4.i: src/ne697g4.cc.i
-
-.PHONY : src/ne697g4.i
-
-# target to preprocess a source file
-src/ne697g4.cc.i:
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/src/ne697g4.cc.i
-.PHONY : src/ne697g4.cc.i
-
-src/ne697g4.s: src/ne697g4.cc.s
-
-.PHONY : src/ne697g4.s
-
-# target to generate assembly for a file
-src/ne697g4.cc.s:
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/src/ne697g4.cc.s
-.PHONY : src/ne697g4.cc.s
 
 src/physicslist.o: src/physicslist.cpp.o
 
@@ -304,7 +304,7 @@ src/physicslist.o: src/physicslist.cpp.o
 
 # target to build an object file
 src/physicslist.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/physicslist.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/physicslist.cpp.o
 .PHONY : src/physicslist.cpp.o
 
 src/physicslist.i: src/physicslist.cpp.i
@@ -313,7 +313,7 @@ src/physicslist.i: src/physicslist.cpp.i
 
 # target to preprocess a source file
 src/physicslist.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/physicslist.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/physicslist.cpp.i
 .PHONY : src/physicslist.cpp.i
 
 src/physicslist.s: src/physicslist.cpp.s
@@ -322,7 +322,7 @@ src/physicslist.s: src/physicslist.cpp.s
 
 # target to generate assembly for a file
 src/physicslist.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/physicslist.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/physicslist.cpp.s
 .PHONY : src/physicslist.cpp.s
 
 src/primarygeneratoraction.o: src/primarygeneratoraction.cpp.o
@@ -331,7 +331,7 @@ src/primarygeneratoraction.o: src/primarygeneratoraction.cpp.o
 
 # target to build an object file
 src/primarygeneratoraction.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/primarygeneratoraction.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/primarygeneratoraction.cpp.o
 .PHONY : src/primarygeneratoraction.cpp.o
 
 src/primarygeneratoraction.i: src/primarygeneratoraction.cpp.i
@@ -340,7 +340,7 @@ src/primarygeneratoraction.i: src/primarygeneratoraction.cpp.i
 
 # target to preprocess a source file
 src/primarygeneratoraction.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/primarygeneratoraction.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/primarygeneratoraction.cpp.i
 .PHONY : src/primarygeneratoraction.cpp.i
 
 src/primarygeneratoraction.s: src/primarygeneratoraction.cpp.s
@@ -349,7 +349,7 @@ src/primarygeneratoraction.s: src/primarygeneratoraction.cpp.s
 
 # target to generate assembly for a file
 src/primarygeneratoraction.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/primarygeneratoraction.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/primarygeneratoraction.cpp.s
 .PHONY : src/primarygeneratoraction.cpp.s
 
 src/run.o: src/run.cpp.o
@@ -358,7 +358,7 @@ src/run.o: src/run.cpp.o
 
 # target to build an object file
 src/run.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/run.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/run.cpp.o
 .PHONY : src/run.cpp.o
 
 src/run.i: src/run.cpp.i
@@ -367,7 +367,7 @@ src/run.i: src/run.cpp.i
 
 # target to preprocess a source file
 src/run.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/run.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/run.cpp.i
 .PHONY : src/run.cpp.i
 
 src/run.s: src/run.cpp.s
@@ -376,7 +376,7 @@ src/run.s: src/run.cpp.s
 
 # target to generate assembly for a file
 src/run.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/run.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/run.cpp.s
 .PHONY : src/run.cpp.s
 
 src/runaction.o: src/runaction.cpp.o
@@ -385,7 +385,7 @@ src/runaction.o: src/runaction.cpp.o
 
 # target to build an object file
 src/runaction.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/runaction.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/runaction.cpp.o
 .PHONY : src/runaction.cpp.o
 
 src/runaction.i: src/runaction.cpp.i
@@ -394,7 +394,7 @@ src/runaction.i: src/runaction.cpp.i
 
 # target to preprocess a source file
 src/runaction.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/runaction.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/runaction.cpp.i
 .PHONY : src/runaction.cpp.i
 
 src/runaction.s: src/runaction.cpp.s
@@ -403,7 +403,7 @@ src/runaction.s: src/runaction.cpp.s
 
 # target to generate assembly for a file
 src/runaction.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/runaction.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/runaction.cpp.s
 .PHONY : src/runaction.cpp.s
 
 src/sensitivedetector.o: src/sensitivedetector.cpp.o
@@ -412,7 +412,7 @@ src/sensitivedetector.o: src/sensitivedetector.cpp.o
 
 # target to build an object file
 src/sensitivedetector.cpp.o:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/sensitivedetector.cpp.o
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/sensitivedetector.cpp.o
 .PHONY : src/sensitivedetector.cpp.o
 
 src/sensitivedetector.i: src/sensitivedetector.cpp.i
@@ -421,7 +421,7 @@ src/sensitivedetector.i: src/sensitivedetector.cpp.i
 
 # target to preprocess a source file
 src/sensitivedetector.cpp.i:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/sensitivedetector.cpp.i
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/sensitivedetector.cpp.i
 .PHONY : src/sensitivedetector.cpp.i
 
 src/sensitivedetector.s: src/sensitivedetector.cpp.s
@@ -430,7 +430,7 @@ src/sensitivedetector.s: src/sensitivedetector.cpp.s
 
 # target to generate assembly for a file
 src/sensitivedetector.cpp.s:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/src/sensitivedetector.cpp.s
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/src/sensitivedetector.cpp.s
 .PHONY : src/sensitivedetector.cpp.s
 
 # Help Target
@@ -439,10 +439,13 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... ne697g4"
 	@echo "... edit_cache"
-	@echo "... NE697G4"
+	@echo "... rebuild_cache"
+	@echo "... CopyExample"
+	@echo "... CE"
+	@echo "... src/CopyExample.o"
+	@echo "... src/CopyExample.i"
+	@echo "... src/CopyExample.s"
 	@echo "... src/detector.o"
 	@echo "... src/detector.i"
 	@echo "... src/detector.s"
@@ -458,9 +461,6 @@ help:
 	@echo "... src/geometrymessenger.o"
 	@echo "... src/geometrymessenger.i"
 	@echo "... src/geometrymessenger.s"
-	@echo "... src/ne697g4.o"
-	@echo "... src/ne697g4.i"
-	@echo "... src/ne697g4.s"
 	@echo "... src/physicslist.o"
 	@echo "... src/physicslist.i"
 	@echo "... src/physicslist.s"

@@ -38,7 +38,7 @@ void EventAction::EndOfEventAction(const G4Event* e) {
     G4cout << "Event " << nevent << " terminated. Tabulating..."
       << G4endl;
   }
-  
+
   // Process the hits collection for this event
   auto sd_man = G4SDManager::GetSDMpointer();
   auto run_man = G4RunManager::GetRunManager();
@@ -67,7 +67,7 @@ void EventAction::EndOfEventAction(const G4Event* e) {
   for (int i=0;i < hc->entries();i++) {
     // Welcome to C++: hc is a pointer to a vector full of pointers to
     // DetectorHit objects, so we first dereference with (*hc), then
-    // access the element index like an array, where each element is a 
+    // access the element index like an array, where each element is a
     // pointer, so we use the -> to access its members
     // Same as DetectorHit* dethit = (*hc)[i];
     // Alternatively: DetectorHit* dethit = hc->at(i);
@@ -82,9 +82,9 @@ void EventAction::EndOfEventAction(const G4Event* e) {
     // Once again, welcome to C++
     string proc = dethit->getProcessName().data();
     // Record only photoelectric and Compton events
-    if ((proc == "phot") || (proc == "compt")) {
+    //if ((proc == "phot") || (proc == "compt")) {
       run->writeHit(x, z, e, proc);
-    }
+    //}
   }
   return;
 }

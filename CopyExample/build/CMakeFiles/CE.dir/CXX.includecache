@@ -74,7 +74,7 @@ detectorhit.hpp
 G4VSensitiveDetector.hh
 ../include/G4VSensitiveDetector.hh
 
-/home/l3375/GeantPlaying/CopyExample/src/ne697g4.cc
+/home/l3375/GeantPlaying/CopyExample/src/CopyExample.cc
 detectorconstruction.hpp
 /home/l3375/GeantPlaying/CopyExample/src/detectorconstruction.hpp
 primarygeneratoraction.hpp

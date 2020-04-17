@@ -23,11 +23,11 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 set(OUTPUT_SCRIPTS_DIR ${PROJECT_BINARY_DIR}/scripts)
 
 # create libne697g4.so and the binary, NE697G4
-add_library(ne697g4 SHARED ${SOURCES})
-target_link_libraries(ne697g4 ${CMAKE_CXX_FLAGS} ${Geant4_LIBRARIES})
+add_library(CopyExample SHARED ${SOURCES})
+target_link_libraries(CopyExample ${CMAKE_CXX_FLAGS} ${Geant4_LIBRARIES})
 # Sim application
-add_executable(NE697G4 ${PROJECT_SOURCE_DIR}/src/ne697g4.cc)
-target_link_libraries(NE697G4 ${CMAKE_CXX_FLAGS} ne697g4 ${Geant4_LIBRARIES})
+add_executable(CE ${PROJECT_SOURCE_DIR}/src/CopyExample.cc)
+target_link_libraries(CE ${CMAKE_CXX_FLAGS} CopyExample ${Geant4_LIBRARIES})
 
 # Copy the scripts to the build directory
 file(COPY ${SCRIPTS} DESTINATION ${OUTPUT_SCRIPTS_DIR})

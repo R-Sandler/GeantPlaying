@@ -60,76 +60,76 @@ CMAKE_SOURCE_DIR = /home/l3375/GeantPlaying/CopyExample
 CMAKE_BINARY_DIR = /home/l3375/GeantPlaying/CopyExample/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/ne697g4.dir
+# Target rules for target CMakeFiles/CopyExample.dir
 
 # All Build rule for target.
-CMakeFiles/ne697g4.dir/all:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/depend
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target ne697g4"
-.PHONY : CMakeFiles/ne697g4.dir/all
+CMakeFiles/CopyExample.dir/all:
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/depend
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target CopyExample"
+.PHONY : CMakeFiles/CopyExample.dir/all
 
 # Include target in all.
-all: CMakeFiles/ne697g4.dir/all
+all: CMakeFiles/CopyExample.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ne697g4.dir/rule: cmake_check_build_system
+CMakeFiles/CopyExample.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3375/GeantPlaying/CopyExample/build/CMakeFiles 11
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ne697g4.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CopyExample.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3375/GeantPlaying/CopyExample/build/CMakeFiles 0
-.PHONY : CMakeFiles/ne697g4.dir/rule
+.PHONY : CMakeFiles/CopyExample.dir/rule
 
 # Convenience name for target.
-ne697g4: CMakeFiles/ne697g4.dir/rule
+CopyExample: CMakeFiles/CopyExample.dir/rule
 
-.PHONY : ne697g4
-
-# clean rule for target.
-CMakeFiles/ne697g4.dir/clean:
-	$(MAKE) -f CMakeFiles/ne697g4.dir/build.make CMakeFiles/ne697g4.dir/clean
-.PHONY : CMakeFiles/ne697g4.dir/clean
+.PHONY : CopyExample
 
 # clean rule for target.
-clean: CMakeFiles/ne697g4.dir/clean
+CMakeFiles/CopyExample.dir/clean:
+	$(MAKE) -f CMakeFiles/CopyExample.dir/build.make CMakeFiles/CopyExample.dir/clean
+.PHONY : CMakeFiles/CopyExample.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CopyExample.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/NE697G4.dir
+# Target rules for target CMakeFiles/CE.dir
 
 # All Build rule for target.
-CMakeFiles/NE697G4.dir/all: CMakeFiles/ne697g4.dir/all
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/depend
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles --progress-num=1,2 "Built target NE697G4"
-.PHONY : CMakeFiles/NE697G4.dir/all
+CMakeFiles/CE.dir/all: CMakeFiles/CopyExample.dir/all
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/depend
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles --progress-num=1,2 "Built target CE"
+.PHONY : CMakeFiles/CE.dir/all
 
 # Include target in all.
-all: CMakeFiles/NE697G4.dir/all
+all: CMakeFiles/CE.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/NE697G4.dir/rule: cmake_check_build_system
+CMakeFiles/CE.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3375/GeantPlaying/CopyExample/build/CMakeFiles 13
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NE697G4.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/l3375/GeantPlaying/CopyExample/build/CMakeFiles 0
-.PHONY : CMakeFiles/NE697G4.dir/rule
+.PHONY : CMakeFiles/CE.dir/rule
 
 # Convenience name for target.
-NE697G4: CMakeFiles/NE697G4.dir/rule
+CE: CMakeFiles/CE.dir/rule
 
-.PHONY : NE697G4
-
-# clean rule for target.
-CMakeFiles/NE697G4.dir/clean:
-	$(MAKE) -f CMakeFiles/NE697G4.dir/build.make CMakeFiles/NE697G4.dir/clean
-.PHONY : CMakeFiles/NE697G4.dir/clean
+.PHONY : CE
 
 # clean rule for target.
-clean: CMakeFiles/NE697G4.dir/clean
+CMakeFiles/CE.dir/clean:
+	$(MAKE) -f CMakeFiles/CE.dir/build.make CMakeFiles/CE.dir/clean
+.PHONY : CMakeFiles/CE.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CE.dir/clean
 
 .PHONY : clean
 

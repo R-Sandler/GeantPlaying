@@ -201,8 +201,8 @@ iostream
 /home/l3375/GeantPlaying/CopyExample/src/primarygeneratoraction.cpp
 primarygeneratoraction.hpp
 /home/l3375/GeantPlaying/CopyExample/src/primarygeneratoraction.hpp
-G4Gamma.hh
-/home/l3375/GeantPlaying/CopyExample/src/G4Gamma.hh
+G4Neutron.hh
+/home/l3375/GeantPlaying/CopyExample/src/G4Neutron.hh
 G4SystemOfUnits.hh
 /home/l3375/GeantPlaying/CopyExample/src/G4SystemOfUnits.hh
 Randomize.hh

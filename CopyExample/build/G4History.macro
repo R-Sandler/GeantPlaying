@@ -42,6 +42,5 @@
 /vis/scene/endOfEventAction accumulate 100
 /vis/viewer/set/autoRefresh true
 /vis/viewer/refresh
-/run/beamOn 1
-/vis/scene/notifyHandlers scene-0
 /run/beamOn 100
+/vis/scene/notifyHandlers scene-0

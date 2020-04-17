@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/l3375/GeantPlaying/CopyExample/src/ne697g4.cc" "/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/NE697G4.dir/src/ne697g4.cc.o"
+  "/home/l3375/GeantPlaying/CopyExample/src/CopyExample.cc" "/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/CE.dir/src/CopyExample.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -43,7 +43,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/ne697g4.dir/DependInfo.cmake"
+  "/home/l3375/GeantPlaying/CopyExample/build/CMakeFiles/CopyExample.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

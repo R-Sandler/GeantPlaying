@@ -184,6 +184,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Value Computed by CMake
 CopyExample_BINARY_DIR:STATIC=/home/l3375/GeantPlaying/CopyExample/build
 
+//Dependencies for the target
+CopyExample_LIB_DEPENDS:STATIC=general;-W -Wall -Wextra -pedantic -fPIC -pthread -m64 -std=c++11;general;Geant4::G4Tree;general;Geant4::G4FR;general;Geant4::G4GMocren;general;Geant4::G4visHepRep;general;Geant4::G4RayTracer;general;Geant4::G4VRML;general;Geant4::G4OpenGL;general;Geant4::G4gl2ps;general;Geant4::G4vis_management;general;Geant4::G4modeling;general;Geant4::G4interfaces;general;Geant4::G4persistency;general;Geant4::G4analysis;general;Geant4::G4error_propagation;general;Geant4::G4readout;general;Geant4::G4physicslists;general;Geant4::G4run;general;Geant4::G4event;general;Geant4::G4tracking;general;Geant4::G4parmodels;general;Geant4::G4processes;general;Geant4::G4digits_hits;general;Geant4::G4track;general;Geant4::G4particles;general;Geant4::G4geometry;general;Geant4::G4materials;general;Geant4::G4graphics_reps;general;Geant4::G4intercoms;general;Geant4::G4global;general;Geant4::G4clhep;general;Geant4::G4zlib;
+
 //Value Computed by CMake
 CopyExample_SOURCE_DIR:STATIC=/home/l3375/GeantPlaying/CopyExample
 
@@ -435,9 +438,6 @@ X11_xf86misc_INCLUDE_PATH:PATH=X11_xf86misc_INCLUDE_PATH-NOTFOUND
 
 //Path to a file.
 X11_xf86vmode_INCLUDE_PATH:PATH=/usr/include
-
-//Dependencies for the target
-ne697g4_LIB_DEPENDS:STATIC=general;-W -Wall -Wextra -pedantic -fPIC -pthread -m64 -std=c++11;general;Geant4::G4Tree;general;Geant4::G4FR;general;Geant4::G4GMocren;general;Geant4::G4visHepRep;general;Geant4::G4RayTracer;general;Geant4::G4VRML;general;Geant4::G4OpenGL;general;Geant4::G4gl2ps;general;Geant4::G4vis_management;general;Geant4::G4modeling;general;Geant4::G4interfaces;general;Geant4::G4persistency;general;Geant4::G4analysis;general;Geant4::G4error_propagation;general;Geant4::G4readout;general;Geant4::G4physicslists;general;Geant4::G4run;general;Geant4::G4event;general;Geant4::G4tracking;general;Geant4::G4parmodels;general;Geant4::G4processes;general;Geant4::G4digits_hits;general;Geant4::G4track;general;Geant4::G4particles;general;Geant4::G4geometry;general;Geant4::G4materials;general;Geant4::G4graphics_reps;general;Geant4::G4intercoms;general;Geant4::G4global;general;Geant4::G4clhep;general;Geant4::G4zlib;
 
 
 ########################

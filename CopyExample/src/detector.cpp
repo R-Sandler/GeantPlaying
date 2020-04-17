@@ -66,8 +66,8 @@ void Detector::build(G4LogicalVolume* world_log) {
 
   // Logical volume (material)
   auto lname = name + "_log";
-  auto dmat = 
-    G4NistManager::Instance()->FindOrBuildMaterial("G4_SODIUM_IODIDE");
+  auto dmat =
+    G4NistManager::Instance()->FindOrBuildMaterial("G4_ANTHRACENE");
   logical = new G4LogicalVolume(geometry,
                                 dmat,
                                 lname);

@@ -1,7 +1,7 @@
 // NE697
 #include "primarygeneratoraction.hpp"
 // Geant4
-#include "G4Gamma.hh"
+#include "G4Neutron.hh"
 #include "G4SystemOfUnits.hh"
 #include "Randomize.hh"
 // std
@@ -15,11 +15,11 @@ using std::abs;
 PrimaryGeneratorAction::PrimaryGeneratorAction():
   G4VUserPrimaryGeneratorAction(),
   // G4ParticleGun(particle type, number to generate per event)
-  gun(new G4ParticleGun(G4Gamma::Definition(), 1))
+  gun(new G4ParticleGun(G4Neutron::Definition(), 1))
 {
   G4cout << "Creating PrimaryGeneratorAction...\n";
   // Make the source monoenergetic
-  gun->SetParticleEnergy(662.0*keV);
+  gun->SetParticleEnergy(14.1*keV);
 
   // Set the position - we want a point-like cone beam source. Note that
   // if we wanted an extended source, we would want to randomly sample the
